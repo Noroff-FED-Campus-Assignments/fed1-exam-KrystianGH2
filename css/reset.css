@@ -6,7 +6,7 @@
  */
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.5;
   font-weight: 300;
   font-synthesis: none;
@@ -41,6 +41,7 @@ a:hover {
 
 body {
   line-height: 1;
+  background: #ffffff;
 }
 
 body,
@@ -52,7 +53,9 @@ h4,
 h5,
 h6 {
   margin: 0;
+  padding: 0;
 }
+
 
 img {
   max-width: 100%;

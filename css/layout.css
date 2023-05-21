@@ -5,7 +5,10 @@
  * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/css-grids
  */
 
-body {
+/* body {
+  color: black;
+  background-color: #fff;
+  background-image: url(/images/7646500_1734.jpg);
   margin: 0;
   width: 100%;
   min-width: 320px;
@@ -53,3 +56,4 @@ body {
   max-width: 1000px;
   margin: 40px auto 0 auto;
 }
+ */

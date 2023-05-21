@@ -5,5 +5,19 @@
  */
 
 :root {
-  /* Add your CSS variables here */
+  --primary-color: #1c2541;
+  --secondary-color: #ff8629;
+  --accent-color: #76a6da;
+  --secondary-accent-color: #e9f4ff;
+  --menu-font-size: 20px;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url(/fonts/Poppins-SemiBold.ttf);
 }

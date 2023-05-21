@@ -2,45 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/explore-website-favicon-color.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+    <meta name="keywords" content="HTML, CSS, JavaScript," />
+    <meta name="Krystian Gere" content="Krystian Gere" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+    <script defer type="module" src="js/app.js"></script>
+    <title>Explore</title>
   </head>
-  <body class="animate__animated animate__fadeIn">
-    <header class="l-header">
-      <h1>Home</h1>
-    </header>
 
-    <main class="l-main">
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/explore_Logo.png" alt="Explore"
+          /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+
+        <ul class="socialLinks">
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+
+        <div class="menuButton">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+
+      <div class="heroImg-text">
+      <h1>Explore the <b>Best</b> <b>Lovely</b>  <b>Places</b>  </h1>
+      <div class="hero-items"><p>Discover awe-inspiring destinations! Get lost in captivating stories, stunning photos, and expert tips that ignite your passion for travel. Join us on our travel blog for unforgettable adventures.</p></div>
+      <button class="ctaButton">Explore</button></div>
+    </header>
+    
+    <main class="main">
+     
+      <div class="latestPost">
+        <h3>Latest Post</h3>
+      </div>
       <section role="search"></section>
 
-      <article role="doc-introduction">
-        <h2>List</h2>
+      <div class="carousel-container">
+        <div class="carouselItems">
+          <div class="slider"></div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev-button"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="next-button"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-        <img
-          src="/placeholder.jpg"
-          loading="lazy"
-          alt="…"
-          class="u-img hero-image"
-          width="1024"
-          height="1024"
-        />
-
-        <p>_REPLACE_INTRODUCTION_</p>
-      </article>
+      <div><button class="btn">Click me</button></div>
 
       <section role="list">
         <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
       </section>
     </main>
+
+    <section class="newsletter-container">
+      <div class="nesletter-items">
+        <p>Subscribe to our Newsletter</p>
+        <p>Don't miss our latest Tavel Blogs</p>
+
+        <div class="newsletter-input">
+          <input id="newsletterEmail" type="email" placeholder="bob@gmail.com">
+          <input id="newsletterSubscribeButton" type="submit" >
+        </div>
+      </div>
+    </section>
 
     <footer class="l-footer">
       <small>Created with ❤️ by _REPLACE_</small>
