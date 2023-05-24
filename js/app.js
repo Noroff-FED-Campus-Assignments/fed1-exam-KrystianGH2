@@ -1,6 +1,4 @@
-import{
-  navFunction,
-} from './navigation.js'
+import { navFunction } from "./navigation.js";
 navFunction();
 
 // const carouselContainer = document.querySelector(".carousel-container");
@@ -26,8 +24,6 @@ const getBlogs = async () => {
     const data = await fetch(url, options);
     const result = await data.json();
 
-    console.log(result);
-
     const blogsItems = result;
 
     for (let i = 0; i < blogsItems.length; i++) {
@@ -36,7 +32,7 @@ const getBlogs = async () => {
           .medium.source_url;
 
       const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
-
+      let blogTitle = blogsItems[i].title.rendered;
       const categoryId = blogsItems[i].categories[0 && 1 && 2];
 
       const categoryName = await getCategoryName(categoryId);
@@ -45,8 +41,8 @@ const getBlogs = async () => {
         
         <div class="cards">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
-        <a href="details.html?=id">
-            <h5 class="blogTitle">${blogsItems[i].title.rendered}</h5>
+        <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
+            <h5 class="blogTitle">${blogTitle}</h5>
             <div class="smallTags">
             <p>${blogsItems[i].excerpt.rendered}</p>
             <small>${categoryName}</small>
@@ -60,8 +56,8 @@ const getBlogs = async () => {
         trendingPostsElements.innerHTML += `
         <div class="cards trendingPosts">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
-        <a href="details.html?=id">
-        <h5 class="blogTitle">${blogsItems[i].title.rendered}</h5>
+        <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
+        <h5 class="blogTitle">${blogTitle}</h5>
         <div class="smallTags">
         <p>${blogsItems[i].excerpt.rendered}</p>
         <small>${categoryName}</small>
@@ -74,8 +70,8 @@ const getBlogs = async () => {
         latestFromElements.innerHTML += `
         <div class="cards latestFrom">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
-        <a href="details.html?=id">
-        <h5 class="blogTitle">${blogsItems[i].title.rendered}</h5>
+        <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
+        <h5 class="blogTitle">${blogTitle}</h5>
         <div class="smallTags">
         <p>${blogsItems[i].excerpt.rendered}</p>
         <small>${categoryName}</small>
@@ -101,9 +97,9 @@ const getBlogs = async () => {
 
     // Move to previous slide
     const previousSlide = () => {
-      if(offset=== 0) {
+      if (offset === 0) {
         offset++;
-        prevButton.disabled=true;
+        prevButton.disabled = true;
       }
       currentIndex = currentIndex - 1 * totalItems;
       let offset = -currentIndex * carouselItemsWidth;
