@@ -1,46 +1,44 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
+const myUrlValues = window.location.search;
+const params = new URLSearchParams(myUrlValues);
+const postId = params.get("id");
 
-// TODO: Get DOM elements from the DOM
+import { navFunction } from "./navigation.js";
+navFunction();
 
-// TODO: Get the query parameter from the URL
+const cardHolder = document.querySelector(".cardHolder");
 
-// TODO: Get the id from the query parameter
+const options = { method: "GET" };
+const url =
+  "https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts/" +
+  postId +
+  "/?_embed";
+// `https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts/?${postId}?_embed=true`
+async function getBlogs() {
+  try {
+    const data = await fetch(url, options);
+    const response = await data.json();
+    const blogPosts = response;
+    console.log(blogPosts);
 
-// TODO: Create a new URL with the id @example: https://www.youtube.com/shorts/ps7EkRaRMzs
+    // const featuredImage =
+    // blogPosts._embedded["wp:featuredmedia"][0].media_details.sizes
+    //         .medium.source_url;
+    const content = blogPosts.content.rendered;
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
+    cardHolder.innerHTML += `
+                <div class="blogCards">
+                <h1 class="blogTitle-details">${blogPosts.title.rendered}</h1>
+                <div class="blogContent">${content}</div>
+            </div>
 
-// TODO: Fetch and Render the list to the DOM
+                `;
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-// TODO: Create event listeners for the filters and the search
+getBlogs();
 
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an a single of objects from the API
-
-/*
-============================================
-Helper functions
-============================================
-*/
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+{
+  /* <img src="${featuredImage}" alt=""></img> */
+}
