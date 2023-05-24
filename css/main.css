@@ -306,6 +306,7 @@ main::after {
   font-weight: 400;
   letter-spacing: 0.3px;
   width: 90%;
+  color: rgb(121, 120, 120);
 }
 
 .smallTags small {
