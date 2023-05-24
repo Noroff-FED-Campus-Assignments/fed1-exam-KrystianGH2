@@ -20,9 +20,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/style.css" />
     <script defer type="module" src="js/app.js"></script>
@@ -30,7 +27,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="hero">
       <div class="navigation">
         <div class="logo">
           <a href="index.html"
@@ -40,7 +37,7 @@
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="">Blogs</a></li>
+          <li><a href="Blogs.html">Blogs</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>
@@ -59,49 +56,121 @@
       </div>
 
       <div class="heroImg-text">
-      <h1>Explore the <b>Best</b> <b>Lovely</b>  <b>Places</b>  </h1>
-      <div class="hero-items"><p>Discover awe-inspiring destinations! Get lost in captivating stories, stunning photos, and expert tips that ignite your passion for travel. Join us on our travel blog for unforgettable adventures.</p></div>
-      <button class="ctaButton">Explore</button></div>
-    </header>
-    
-    <main class="main">
-     
-      <div class="latestPost">
-        <h3>Latest Post</h3>
+        <h1><b>Explore</b> the <b>Best</b> <b>Lovely</b> <b>Places</b></h1>
+        <div class="hero-items">
+          <p>
+            Discover awe-inspiring destinations! Get lost in captivating
+            stories, stunning photos, and expert tips that ignite your passion
+            for travel. Join us on our travel blog for unforgettable adventures.
+          </p>
+        </div>
+        <button class="ctaButton">Explore</button>
       </div>
+    </header>
+
+    <main class="main">
       <section role="search"></section>
 
-      <div class="carousel-container">
-        <div class="carouselItems">
-          <div class="slider"></div>
+      <section class="carouselContent">
+        <div class="latestPost">
+          <h3>Our Latest Post</h3>
         </div>
-      </div>
-      <div class="buttons">
-        <button id="prev-button"><i class="fa-solid fa-arrow-left"></i></button>
-        <button id="next-button"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
+        <div class="carousel-container">
+          <div class="carouselItems">
+            <div class="slider"></div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev-button">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button id="next-button">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
 
-      <div><button class="btn">Click me</button></div>
+      <section class="trendingPost-container">
+        <h3>Trending Posts</h3>
+        <div class="trendingPostItem">
+          <div class="trendingPostsElements"></div>
+        </div>
+      </section>
+
+      <section class="latestAcategory-container">
+        <h3>Our Latest From Europe</h3>
+        <div class="latestFromItems">
+          <div class="latestFromElements"></div>
+        </div>
+      </section>
 
       <section role="list">
         <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
       </section>
+      <section class="newsletter-container">
+        <div class="newsletter-elements">
+          <div class="newsletterImage">
+            <img src="/images/highRes_newsletter2.png" alt="" />
+          </div>
+          <div class="newsletter-items">
+            <div class="subscribeText">
+              <h4>Subscribe to <b>Our Newsletter!</b></h4>
+              <h5>Stay updated. Don't miss our latest Tavel Blogs!</h5>
+            </div>
+
+            <div class="newsletter-input">
+              <input
+                id="newsletterEmail"
+                type="email"
+                placeholder=" &#xf0e0; Your Email"
+                style="font-family: Arial, FontAwesome"
+              />
+              <button id="newsletterSubscribeButton" type="submit">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <section class="newsletter-container">
-      <div class="nesletter-items">
-        <p>Subscribe to our Newsletter</p>
-        <p>Don't miss our latest Tavel Blogs</p>
+    <footer class="l-footer">
+      <div class="footer-container">
+        <div class="footerElements">
+          <div class="footer-logo">
+            <img src="/images/exploreWhiteText.png" alt="" />
+          </div>
+          <div class="footerItems">
+            <div class="contactDetails">
+              <p>
+                If you have any questions, don't hesitate to reach out to us.
+                Feel free to contact us via phone, email, or our convenient
+                <a href="#">contact form</a>.
+              </p>
+              <p>
+                <i class="fa-sharp fa-solid fa-location-dot"></i> Mølleparken 4,
+                0459 Oslo
+              </p>
+              <p><i class="fa-solid fa-phone-flip"></i> +47 68 35 67</p>
+              <p><i class="fa-solid fa-envelope"></i> explore@gmail.com</p>
+            </div>
 
-        <div class="newsletter-input">
-          <input id="newsletterEmail" type="email" placeholder="bob@gmail.com">
-          <input id="newsletterSubscribeButton" type="submit" >
+            <div class="socialDetails">
+              <h6>Social</h6>
+              <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+              <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+              <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            </div>
+
+            <div class="footer-about">
+              <h6>About</h6>
+              <a href="">Contact us</a> 
+              <a href="">About us</a> 
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-
-    <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <!-- <small>Created with ❤️ by _REPLACE_</small> -->
     </footer>
   </body>
 </html>
