@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/explore-website-favicon-color.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
+    <meta name="keywords" content="HTML, CSS, JavaScript," />
+    <meta name="Krystian Gere" content="Krystian Gere" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer type="module" src="js/blogs.js"></script>
+    <title>Blogs</title>
+  </head>
+  <body class="blogsBackground">
+    <div class="map"></div>
+    <header>
+      <div class="navigation">
+        <div class="logo">
+          <a href="index.html"
+          ><img src="images/explore_Logo.png" alt="Explore"
+          /></a>
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+
+        <ul class="socialLinks">
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+
+        <div class="menuButton">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="pageTitleContainer">
+        <div class="pageTitle">
+          <a href="">Blogs</a> <span>|</span>
+          <p>Places</p>
+        </div>
+      </div>
+
+      <div class="placesContainer">
+        <div class="placesElements">
+          <div class="placesItems">
+            <div class="category-title">
+              <h2>Places</h2>
+              <p>
+                Discover inspiration for exploration through our captivating
+                travel blogs from around the world.
+              </p>
+            </div>
+            <div class="search">
+              <input
+                type="search"
+                placeholder="&#xf002; Search"
+                style="font-family: Arial, FontAwesome"
+              />
+            </div>
+
+            <div class="placesList">
+              <li class="africa-li">Africa</li>
+              <li class="americas-li">Americas</li>
+              <li class="antartica-li">Antarctica</li>
+              <li class="asia-li">Asia</li>
+              <li class="europe-li">Europe</li>
+              <li class="oceania-li">Oceania</li>
+            </div>
+          </div>
+
+          <div class="sortButtons-container">
+            <div class="sortButton-elements">
+              <button>Sort by..</button>
+              <div class="sortButtonItems">
+                <select id="selectOption">
+                  <option selected value="">Options</option>
+                  <option class="sortBtnAZ" value="AZ">A - Z</option>
+                  <option  class="sortBtnZA" value="ZA">Z - A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="travelBlogs-container">
+        <h3>Travel blogs</h3>
+        <div class="travelBlogsItem">
+          <div class="travelBlogsElements"></div>
+        </div>
+      </section>
+      <button id="loadMore">LOAD MORE</button>
+    </main>
+  </body>
+</html>
+
