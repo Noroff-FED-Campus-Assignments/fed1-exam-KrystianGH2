@@ -1,0 +1,86 @@
+.cardDetail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 5px;
+}
+
+.blogTitle-details {
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 50px 0;
+}
+
+.wp-element-caption {
+  font-size: 14px;
+  margin: 10px;
+  font-weight: 900;
+}
+.wp-block-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+.wp-block-group p {
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.wp-block-post-date {
+  padding-top: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.blogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wp-block-heading {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.blogCards p {
+  color: var(--primary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 0;
+}
+.wp-block-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.wp-block-gallery img {
+  width: 310px;
+}
