@@ -74,7 +74,7 @@ const getBlogs = async (searchValue = "") => {
         
         <div class="cards">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
-      <a href="details.html?=id">
+      <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
       <h5 class="blogTitle">${blogTitle}</h5>
       <div class="smallTags">
       <p>${blogsItems[i].excerpt.rendered}</p>
