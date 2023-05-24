@@ -32,6 +32,7 @@ let selectedValues = "AZ";
 let isLoaded = false;
 
 selectOption.addEventListener("change", async (e) => {
+  e.preventDefault();
   selectedValues = e.target.value;
   clearTravelBlogs();
   setTimeout(() => {
@@ -48,12 +49,12 @@ const getBlogs = async (searchValue = "") => {
   };
 
   try {
-    const data = await fetch((url += `&orderby=title&order=asc`), options);
+    const data = await fetch(url, options);
     const result = await data.json();
 
     let blogsItems = result;
 
-    if (!isLoaded || selectedValues !== "AZ") {
+    if (isLoaded) {
       sortCards(blogsItems);
     }
 
@@ -152,7 +153,8 @@ liOceania.addEventListener("click", async () => {
 getBlogs();
 
 const loadMore = document.querySelector("#loadMore");
-loadMore.addEventListener("click", () => {
+loadMore.addEventListener("click", (e) => {
+  e.preventDefault();
   clearTravelBlogs();
   setTimeout(() => {
     blogsPostPerPage += 10;
