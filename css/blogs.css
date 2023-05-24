@@ -1,0 +1,353 @@
+/* -------------BODY BACKGROUND----------------- */
+html {
+  overflow-y: scroll;
+}
+
+.map {
+  position: relative;
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  background-image: url(/images/worldMap-mobile.png);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  width: 100%;
+  opacity: 0.2;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/9;
+  z-index: -1;
+}
+
+/* -------------------------NAVIGATION----------------------------- */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 10px;
+}
+
+.logo {
+  width: 180px;
+}
+
+.nav-links ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0vh;
+  right: 0px;
+  background-color: var(--secondary-accent-color);
+  width: 100%;
+  height: 100vh;
+  font-size: var(--menu-font-size);
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  padding: 50px 0;
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(-130%);
+  z-index: 1;
+}
+
+.nav-links.active {
+  transform: translateX(0%);
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--primary-color);
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: -4px;
+  left: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.socialLinks {
+  display: none;
+  list-style: none;
+  color: var(--primary-color);
+  font-size: var(--menu-font-size);
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuButton div {
+  display: block;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 40px;
+  height: 5px;
+  background: var(--primary-color);
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuButton div:nth-child(2) {
+  width: 25px;
+  transform: translateX(15px);
+}
+
+.menuButton {
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menuButton:hover div {
+  background-color: #fff;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+  transform: translateX(-90%);
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+/* NAVIGATION */
+
+/* --------------MAIN--------------- */
+
+/* ------------MAIN PAGE TITLE CONTAINER--------- */
+
+.pageTitleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  margin: 2rem 0.9rem;
+}
+
+.pageTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.pageTitle a,
+p,
+span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: darkgray;
+}
+.pageTitle a {
+  background-image: linear-gradient(rgb(88, 88, 88), rgb(88, 88, 88));
+  background-repeat: no-repeat;
+  background-position: left bottom -4px;
+  background-size: 0% 6px;
+  transition: 0.4s ease;
+}
+
+.pageTitle a:hover {
+  color: var(--primary-color);
+  background-size: 100% 6px;
+}
+
+.pageTitle p {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ------------MAIN PAGE TITLE CONTAINER--------- */
+
+/* ------------PLACES CONTAINER--------- */
+
+.placesElements {
+  display: flex;
+  flex-direction: column;
+}
+
+.placesItems {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin: 15px;
+}
+
+.category-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-title h2 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.category-title p {
+  font-size: 16px;
+  font-weight: 400;
+  width: 325px;
+  color: rgb(136, 136, 136);
+}
+
+.placesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: var(--content-spacing);
+}
+
+.placesList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  background-color: var(--secondary-accent-color);
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/*------------ SORT BUTTONS--------------- */
+.sortButton-elements {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.sortButton-elements button {
+  width: 80px;
+  height: 35px;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.sortButtonItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#selectOption {
+  background: var(--secondary-accent-color);
+  color: var(--primary-color);
+  width: 90px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  outline: 0px;
+}
+
+#selectOption option[value="AZ"] {
+  color: var(--primary-color);
+  font-weight: 500;
+  background-color: #fff;
+}
+#selectOption option[value="ZA"] {
+  color: var(--primary-color);
+  font-weight: 500;
+  width: 90px;
+  background: #fff;
+}
+
+/*------------ SEARCH INPUT--------------- */
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  background-color: #ffffff9c;
+  border: 2px solid rgb(146, 146, 146);
+  border-radius: 50px;
+  width: 250px;
+  height: 35px;
+  outline: 0px;
+}
+
+.travelBlogs-container h3 {
+  display: flex;
+  align-items: center;
+  font-size: var(--menu-font-size);
+  font-weight: bold;
+  margin: 15px;
+}
+
+.travelBlogs-container {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+}
+
+.travelBlogsItem::-webkit-scrollbar {
+  display: none;
+}
+
+.travelBlogsItem {
+  display: flex;
+  margin: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.travelBlogsElements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
