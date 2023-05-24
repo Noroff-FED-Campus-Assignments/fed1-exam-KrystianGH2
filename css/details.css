@@ -1,3 +1,4 @@
+/*---------BLOG POSTS CARDS-------------- */
 .cardDetail-container {
   display: flex;
   flex-direction: column;
@@ -84,3 +85,156 @@
 .wp-block-gallery img {
   width: 310px;
 }
+
+/* -----------DiVIDER SECTION------------- */
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 2%;
+}
+
+.line {
+  background: rgb(138, 137, 137);
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+
+/* ----------SHARE/COMMENT SECTION -----------*/
+
+.shareItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
+
+.shareIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.shareItems p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: var(--primary-color);
+}
+
+.fa-brands {
+  color: var(--primary-color);
+  background-color: var(--secondary-accent-color);
+  font-size: 18px;
+}
+
+.fa-brands:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.inputGroup button {
+  height: 45px;
+  width: 60px;
+  color: #ffffff;
+  background-color: black;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.inputGroup button:hover {
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  background-color: var(--secondary-color);
+  transform: scale(1.01);
+  box-shadow: 2px 2px 6px #d9914e, -2px -2px 6px #ffc56a;
+}
+
+.inputGroup input {
+  width: 80%;
+  height: 45px;
+  outline: 0px;
+  font-size: 16px;
+  background-color: #cccccc;
+  outline: 0px;
+}
+::placeholder {
+  color: var(--primary-color);
+  padding: 5px;
+  font-weight: 300;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.commentElement {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin: var(--content-spacing) 0 10px 0;
+}
+
+.commentElement label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#commentSection {
+  display: none;
+  flex-direction:column;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px 10px var(--content-spacing) 10px ;
+  border: 1px solid #494949;
+}
+
+.fa-user{
+  display: flex;
+  color: var(--primary-color);
+  background-color: var(--secondary-accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+
+}
+.commentText {
+  font-weight: 500;
+  color: var(--primary-color);
+  width: 100%;
+  height: 30px;
+}
+
+.comment{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.commentDates{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-accent-color);
+  height: 55px;
+  width: 200px;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
