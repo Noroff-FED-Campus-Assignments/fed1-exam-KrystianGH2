@@ -4,7 +4,7 @@ html {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 
 .hero::after {
@@ -236,13 +236,18 @@ main::after {
 }
 
 .latestPost h3 {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 900;
   margin: 50px 10px 30px 10px;
 }
 
 .carouselContent {
   margin: var(--content-spacing) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8d6b648;
 }
 
 .carousel-container {
@@ -347,12 +352,16 @@ main::after {
   display: flex;
   align-items: center;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 900;
   margin: 50px 10px 30px 10px;
 }
 
 .trendingPostItem::-webkit-scrollbar {
   display: none;
+}
+
+.h3hidden{
+  display: none !important;
 }
 
 .trendingPostItem {
@@ -379,7 +388,7 @@ main::after {
   display: flex;
   align-items: center;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 900;
   margin: 50px 10px 30px 10px;
 }
 
@@ -643,13 +652,18 @@ footer::-webkit-scrollbar {
 
   .hero .heroImg-text {
     width: 350px;
-    line-height: 60px;
+    line-height: 55px;
   }
 
   .carousel-container {
     width: 760px;
   }
 
+  .h3hidden{
+    display: none !important;
+  }
+
+ 
   .newsletter-elements {
     height: 35vh;
     margin: var(--content-spacing) 0;
@@ -749,9 +763,6 @@ footer::-webkit-scrollbar {
   }
 
   /* -----------------------MAIN------------------- */
-  .hero {
-    height: 60vh;
-  }
 
   .hero .heroImg-text {
     width: 510px;
@@ -764,16 +775,35 @@ footer::-webkit-scrollbar {
   .cardSlides {
     width: 300px;
   }
+  .trendingPostItem {
+    flex-direction: column;
+  }
+  .latestFromItems {
+    flex-direction: column;
+  }
 
-  .carouselParentConatiner{
+  .trendingPostItem h3 {
+    margin: 50px 10px 30px 0px;
+  }
+
+  .latestFromItems h3 {
+    margin: 50px 10px 30px 0px;
+  }
+
+  .carouselParentConatiner {
     display: flex;
     justify-content: center;
   }
 
-  .carousel-container{
-    width: 100%;
+  .carousel-container {
+    width: 960px;
   }
-  .slider{
+
+  .carouselContent {
+    gap: 50px;
+  }
+
+  .slider {
     gap: 25px;
   }
 
@@ -782,16 +812,97 @@ footer::-webkit-scrollbar {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
-}
+  }
 
-.latestFromElements{
-  justify-content: flex-start;
+  .latestFromElements {
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
-}
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .carousel-container {
+    width: 1298px;
+  }
 
+  .trendingPost-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .trendingPostItem {
+    flex-direction: column;
+    padding: 0 6%;
+  }
+
+  .trendingPostsElements {
+    justify-content: center;
+  }
+
+  .latestFromElements {
+    justify-content: center;
+  }
+  .s {
+    display: flex;
+    flex-direction: column;
+  }
+  .h3Hidden2{
+    display: none !important;
+  }
+
+  .h3hidden{
+    display: block !important;
+    margin-left: 6px;
+    margin-bottom: 10px;
+  }
+
+  .latestFromItems {
+    flex-direction: column;
+    padding: 0 6%;
+  }
+
+  .newsletter-container {
+    margin: 70px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .newsletter-elements {
+    height: 40vh;
+    width: 80vw;
+}
+
+.footerElements {
+  margin: 20px 105px;
+}
+}
+
+
+@media screen and (min-width: 1920px) {
+  main {
+    margin: 0 85px;
+}
+
+.footer-container {
+  width: 100%;
+}
+.footerElements {
+  margin: 20px 200px;
+}
+
+footer {
+  height: 40svh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+}
+
+@media screen and (min-width: 2560px) {
+  body{
+    margin: 0 10%;
+  }
 }
