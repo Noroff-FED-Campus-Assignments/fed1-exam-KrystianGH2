@@ -18,15 +18,17 @@ async function getBlogs() {
     const response = await data.json();
     const blogPosts = response;
 
+    // const titleTags = document.querySelector(".titleTags");
     const content = blogPosts.content.rendered;
 
     cardHolder.innerHTML += `
-                <div class="blogCards">
-                <h1 class="blogTitle-details">${blogPosts.title.rendered}</h1>
-                <div class="blogContent">${content}</div>
-            </div>
-
-                `;
+    <div class="blogCards">
+    <h1 class="blogTitle-details">${blogPosts.title.rendered}</h1>
+    <div class="blogContent">${content}</div>
+    </div>
+    
+    `;
+    // titleTags.innerHTML += `<p>${blogPosts.title.rendered}</p>`;
   } catch (err) {
     console.log(err);
   }
@@ -74,7 +76,6 @@ const renderedComments = () => {
     commentSection.style.display = "flex";
   }
 };
-
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector("#prev-button");
 const nextButton = document.querySelector("#next-button");
@@ -103,7 +104,7 @@ const getBlogs2 = async () => {
 
       const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
       let blogTitle = blogsItems[i].title.rendered;
-      const categoryId = blogsItems[i].categories[0 && 1 && 2];
+      const categoryId = blogsItems[i].categories[0];
 
       const categoryName = await getCategoryName(categoryId);
       if (categoryName.startsWith("L")) {
@@ -112,50 +113,43 @@ const getBlogs2 = async () => {
         <div class="cards">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
         <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
-            <h5 class="blogTitle">${blogTitle}</h5>
-            <div class="smallTags">
+        <h5 class="blogTitle">${blogTitle}</h5>
+        <div class="smallTags">
             <p>${blogsItems[i].excerpt.rendered}</p>
             <small>${categoryName}</small>
             </div></a>
-        </div>
-        
-        `;
+            </div>
+            
+            `;
       }
     }
 
-    const carouselItems = document.querySelectorAll(".carouselItems");
-    // const carouselContainer = document.querySelector(".carousel-container");
+    const carouselItems = document.querySelectorAll(".cards");
     let currentIndex = 0;
     const totalItems = carouselItems.length;
-    console.log(totalItems);
 
     let carouselItemsWidth = 16.8;
 
-    // Move to next slide
+   
+   // Move to next slide
     const nextSlide = () => {
-      currentIndex = currentIndex + 1 * totalItems;
+      currentIndex = (currentIndex + 1) % totalItems;
       let offset = -currentIndex * carouselItemsWidth;
       slider.style.transform = `translateX(${offset}%)`;
     };
 
     // Move to previous slide
     const previousSlide = () => {
-      if (offset === 0) {
-        offset++;
-        prevButton.disabled = true;
-      }
-      currentIndex = currentIndex - 1 * totalItems;
-      let offset = -currentIndex * carouselItemsWidth;
+      currentIndex = (currentIndex - 1) % totalItems;
+      let offset = +currentIndex * carouselItemsWidth;
       slider.style.transform = `translateX(${offset}%)`;
     };
 
     nextButton.addEventListener("click", () => {
-      console.log("cliked");
       nextSlide();
     });
 
     prevButton.addEventListener("click", () => {
-      console.log("cliked");
       previousSlide();
     });
   } catch (e) {
