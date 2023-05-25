@@ -33,11 +33,16 @@ const getBlogs = async () => {
       const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
       let blogTitle = blogsItems[i].title.rendered;
       const categoryId = blogsItems[i].categories[0];
+      const loader  = document.querySelector(".loader-container");
 
       const categoryName = await getCategoryName(categoryId);
+
+
+
       if (categoryName.startsWith("L")) {
+        loader.innerHTML = "";
         slider.innerHTML += `
-        
+
         <div class="cards cardSlides">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
         <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
@@ -47,7 +52,7 @@ const getBlogs = async () => {
             <small>${categoryName}</small>
             </div></a>
         </div>
-        
+
         `;
       } else if (i <= 8) {
         trendingPostsElements.innerHTML += "";
