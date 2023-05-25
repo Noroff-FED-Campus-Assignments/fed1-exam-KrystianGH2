@@ -130,18 +130,17 @@ const getBlogs2 = async () => {
 
     let carouselItemsWidth = 16.8;
 
-   
-   // Move to next slide
+    // Move to next slide
     const nextSlide = () => {
-      currentIndex = (currentIndex + 1) % totalItems;
+      currentIndex = (currentIndex + 1 + totalItems) % totalItems;
       let offset = -currentIndex * carouselItemsWidth;
       slider.style.transform = `translateX(${offset}%)`;
     };
 
     // Move to previous slide
     const previousSlide = () => {
-      currentIndex = (currentIndex - 1) % totalItems;
-      let offset = +currentIndex * carouselItemsWidth;
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      let offset = -currentIndex * carouselItemsWidth;
       slider.style.transform = `translateX(${offset}%)`;
     };
 
