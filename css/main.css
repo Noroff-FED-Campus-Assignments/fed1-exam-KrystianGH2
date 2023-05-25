@@ -22,6 +22,16 @@ html {
   z-index: -2;
 }
 
+img{
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+img:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
 .hero .heroImg-text {
   position: absolute;
   display: flex;
@@ -143,6 +153,11 @@ li {
   transition: all 0.2s ease-in-out;
 }
 
+.nav-links a:active {
+  color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -156,6 +171,10 @@ li {
 }
 
 .nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:active::after {
   width: 100%;
 }
 
@@ -181,7 +200,7 @@ li {
 }
 
 .menuButton:hover div {
-  background-color: #fff;
+  color: var(--secondary-accent-color);
 }
 
 @keyframes navLinkFade {
@@ -206,6 +225,41 @@ li {
   transform: rotate(45deg) translate(-8px, -6px);
 }
 /* NAVIGATION */
+
+
+/* ------------LOADING--------------- */
+.loader-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.loader{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  border: 2px solid;
+  position: relative;
+}
+
+.loader::before{
+  content:'';
+  position: absolute;
+  margin: 5px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: var(--secondary-color);
+  animation: loading 2s infinite;
+}
+
+
+@keyframes loading{
+  100%{
+    inset:0
+  }
+}
 
 /* ----------------------- MAIN------------------------- */
 
@@ -276,7 +330,19 @@ main::after {
   gap: 15px;
   width: 364px;
   height: auto;
-  transition: all 0.3s ease-in-out;
+}
+
+.cards:hover{
+  background-color: #fdf4edcb;
+  border-radius: 10px;
+  transform: scale(1.01);
+  transition: 0.3s cubic-bezier(0.28, 0.01, 0, 0.99);
+}
+
+.cards:active{
+  background-color: #ffdfc6cb;
+  border-radius: 10px;
+  transform: scale(1.01);
 }
 
 .cards img {
@@ -285,10 +351,22 @@ main::after {
   aspect-ratio: 16 / 9;
 }
 
+
+
 .blogTitle {
+  transition: all .2s ease-in-out; 
   font-size: 18px;
   font-weight: bold;
   color: var(--primary-color);
+  line-height: 21px;
+  position: relative;
+}
+
+
+
+.blogTitle:hover{
+  width: 100%;
+  transform: scale(0.97)
 }
 
 .smallTags {
@@ -725,6 +803,7 @@ footer::-webkit-scrollbar {
   .socialLinks {
     display: flex !important;
     flex-direction: row;
+    cursor: pointer;
   }
 
   .nav-links2 {
@@ -762,11 +841,24 @@ footer::-webkit-scrollbar {
     width: 100%;
   }
 
+  .nav-links2 a:active {
+    color: var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nav-links2 a:active::after {
+    width: 100%;
+  }
+
+  
+
+  
   /* -----------------------MAIN------------------- */
 
   .hero .heroImg-text {
     width: 510px;
   }
+
 
   main {
     margin: 0 25px;

@@ -25,3 +25,30 @@
     transform: translateY(0px);
   }
 }
+
+
+.loader{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  border: 2px solid;
+  position: relative;
+}
+
+.loader::before{
+  content:'';
+  position: absolute;
+  margin: 5px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: var(--secondary-color);
+  animation: loading 2s infinite;
+}
+
+
+@keyframes loading{
+  100%{
+    inset:0
+  }
+}
