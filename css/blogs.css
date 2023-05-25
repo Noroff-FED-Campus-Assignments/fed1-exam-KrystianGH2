@@ -161,21 +161,27 @@ li {
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 300px;
-  margin: 2rem 0.9rem;
+  width: 350px;
+  margin: 20px 15px 50px 10px;
 }
 
 .pageTitle {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
+}
+
+.pageTitle span {
+  font-size: 35px;
+  font-weight: 300;
 }
 
 .pageTitle a,
 p,
 span {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: darkgray;
 }
 .pageTitle a {

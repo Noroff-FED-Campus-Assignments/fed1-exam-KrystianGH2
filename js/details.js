@@ -1,6 +1,8 @@
 const myUrlValues = window.location.search;
 const params = new URLSearchParams(myUrlValues);
 const postId = params.get("id");
+const tabTitle = document.querySelector('.htmlTab');
+const title = document.querySelector('.titleTags')
 
 import { navFunction } from "./navigation.js";
 navFunction();
@@ -18,8 +20,8 @@ async function getBlogs() {
     const response = await data.json();
     const blogPosts = response;
 
-    // const titleTags = document.querySelector(".titleTags");
     const content = blogPosts.content.rendered;
+    const htmlTitle = blogPosts.title.rendered;
 
     cardHolder.innerHTML += `
     <div class="blogCards">
@@ -28,7 +30,9 @@ async function getBlogs() {
     </div>
     
     `;
-    // titleTags.innerHTML += `<p>${blogPosts.title.rendered}</p>`;
+
+    tabTitle.innerHTML += `${htmlTitle} `
+    title.innerHTML += `${htmlTitle}`
   } catch (err) {
     console.log(err);
   }
