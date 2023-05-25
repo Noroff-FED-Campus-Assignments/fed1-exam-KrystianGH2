@@ -49,7 +49,7 @@ const getBlogs = async () => {
         </div>
         
         `;
-      } else if (i <= 10) {
+      } else if (i <= 8) {
         trendingPostsElements.innerHTML += "";
 
         trendingPostsElements.innerHTML += `
@@ -88,7 +88,11 @@ const getBlogs = async () => {
     // Move to next slide
     const nextSlide = () => {
       currentIndex = (currentIndex + 1) % totalItems;
-      let offset = -currentIndex * carouselItemsWidth;
+      let offset = -(currentIndex * carouselItemsWidth);
+
+      if (currentIndex === 85 * 2) {
+        offset = -(totalItems * carouselItemsWidth);
+      }
       slider.style.transform = `translateX(${offset}%)`;
     };
 
