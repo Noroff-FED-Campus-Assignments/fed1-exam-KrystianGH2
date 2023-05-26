@@ -44,7 +44,7 @@ All of these todo's must be done to pass the asssignment.
 
 - [ ] A error message is present when the End-user encounters a error while viewing the index page.
 - [ ] A error message is present when the End-user encounters a error while viewing the details page.
-- [ ] As a customer I can view the title of the item on the browser tab for a details page.
+- [x] As a customer I can view the title of the item on the browser tab for a details page.
 - [ ] As a customer I can view validation message when they input an incorrect name.
 - [ ] As a customer I can view validation message when they input an incorrect subject that is less than 15 characters.
 - [ ] As a customer I can view validation message when they input an incorrect Email address.
@@ -62,29 +62,29 @@ All of these todo's must be done to pass the asssignment.
 
 ## End-user success criteria (Optional - 100%)
 
-- [ ] End-user can search for a specific item.
-- [ ] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
-  - [ ] Name descending order
+- [x] End-user can search for a specific item.
+- [x] End-user can filter the list.
+- [x] End-user can sort list by;
+  - [x] Name ascending order
+  - [x] Name descending order
 - [ ] Confirmation modal after custumer submits a successful contact form.
 - [ ] End-user can auto-fill the contact form using the browser auto-fill.
 - [ ] End-user can auto-fill the contact form using a password manager.
 - [ ] Validation still works when End-user uses copy and pastes into input fields.
 - [ ] End-user can see a postive feedback when they input correct info and pass validation.
-- [ ] End-user can experience pleasant animations.
+- [x] End-user can experience pleasant animations.
 - [ ] End-user needs to prove there are human using a captcha feature on the contact form.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
-- [ ] End-user can view a custom favicon.
-- [ ] CSS uses variables
+- [x] End-user can view a custom favicon.
+- [x] CSS uses variables
 - [ ] Code is dry - There are no repeating functions, variables.
 - [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
-- [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
-- [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
+- [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
+- [x] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
 - [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
