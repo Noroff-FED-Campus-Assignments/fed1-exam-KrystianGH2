@@ -13,6 +13,7 @@ const liOceania = document.querySelector(".oceania-li");
 const selectOption = document.querySelector("#selectOption");
 
 const searchEl = document.querySelector(".search");
+const loader  = document.querySelector(".loader-container");
 
 searchEl.addEventListener("input", async (e) => {
   setTimeout(async () => {
@@ -70,9 +71,10 @@ const getBlogs = async (searchValue = "") => {
         const categoryId = blogsItems[i].categories[0];
         const categoryName = await getCategoryName(categoryId);
 
+        loader.innerHTML = "";
         travelBlogs.innerHTML += `
         
-        <div class="cards">
+        <div class="cards cards-blogsPage">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
       <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
       <h5 class="blogTitle">${blogTitle}</h5>
