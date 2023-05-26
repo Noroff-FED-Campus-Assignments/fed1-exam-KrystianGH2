@@ -23,11 +23,11 @@
     />
     <link rel="stylesheet" href="/style.css" />
     <script defer type="module" src="js/blogs.js"></script>
-    <title>Blogs</title>
+    <title>Explore | Blogs</title>
   </head>
   <body>
     <div class="map"></div>
-    <header>
+    <header class="headerBlogPage">
       <div class="navigation">
         <div class="logo">
           <a href="index.html"
@@ -40,6 +40,13 @@
           <li><a href="">Blogs</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
+        </ul>
+
+        <ul class="nav-links2">
+          <li><a class="navLinks" href="index.html">Home</a></li>
+          <li><a class="navLinks" href="Blogs.html">Blogs</a></li>
+          <li><a class="navLinks" href="">About</a></li>
+          <li><a class="navLinks" href="">Contact</a></li>
         </ul>
 
         <ul class="socialLinks">
@@ -56,50 +63,51 @@
       </div>
     </header>
     <main>
-      <div class="pageTitleContainer">
-        <div class="pageTitle">
-          <a href="blogs.html">Blogs</a> <span>|</span>
-          <p>Places</p>
-        </div>
-      </div>
-
-      <div class="placesContainer">
-        <div class="placesElements">
-          <div class="placesItems">
-            <div class="category-title">
-              <h2>Places</h2>
-              <p>
-                Discover inspiration for exploration through our captivating
-                travel blogs from around the world.
-              </p>
-            </div>
-            <div class="search">
-              <input
-                type="search"
-                placeholder="&#xf002; Search"
-                style="font-family: Arial, FontAwesome"
-              />
-            </div>
-
-            <div class="placesList">
-              <li class="africa-li">Africa</li>
-              <li class="americas-li">Americas</li>
-              <li class="antartica-li">Antarctica</li>
-              <li class="asia-li">Asia</li>
-              <li class="europe-li">Europe</li>
-              <li class="oceania-li">Oceania</li>
+      <div class="containerParent">
+        <div class="placesContainer">
+          <div class="pageTitleContainer">
+            <div class="pageTitle">
+              <a href="blogs.html">Blogs</a> <span>|</span>
+              <p>Places</p>
             </div>
           </div>
+          <div class="placesElements">
+            <div class="placesItems">
+              <div class="category-title">
+                <h2>Places</h2>
+                <p>
+                  Discover inspiration for exploration through our captivating
+                  travel blogs from around the world.
+                </p>
+              </div>
+              <div class="search">
+                <input
+                  type="search"
+                  placeholder="&#xf002; Search"
+                  style="font-family: Arial, FontAwesome"
+                />
+              </div>
 
-          <div class="sortButtons-container">
-            <div class="sortButton-elements">
-              <button>Sort by..</button>
-              <div class="sortButtonItems">
-                <select id="selectOption">
-                  <option disabled selected value="">Options</option>
-                  <option class="sortBtnAZ" value="AZ">A - Z</option>
-                  <option class="sortBtnZA" value="ZA">Z - A</option>
-                </select>
+              <div class="placesList">
+                <li class="africa-li">Africa</li>
+                <li class="americas-li">Americas</li>
+                <li class="antartica-li">Antarctica</li>
+                <li class="asia-li">Asia</li>
+                <li class="europe-li">Europe</li>
+                <li class="oceania-li">Oceania</li>
+              </div>
+            </div>
+
+            <div class="sortButtons-container">
+              <div class="sortButton-elements">
+                <button>Sort by..</button>
+                <div class="sortButtonItems">
+                  <select id="selectOption">
+                    <option disabled selected value="">Options</option>
+                    <option class="sortBtnAZ" value="AZ">A - Z</option>
+                    <option class="sortBtnZA" value="ZA">Z - A</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -107,12 +115,85 @@
       </div>
 
       <section class="travelBlogs-container">
-        <h3>Travel blogs</h3>
+        <h3 class="h3Hidden2">Travel blogs</h3>
         <div class="travelBlogsItem">
+          <h3 class=" h3hidden">Travel blogs</h3>
           <div class="travelBlogsElements"></div>
         </div>
       </section>
-      <button id="loadMore">LOAD MORE</button>
+      <div class="loadMoreContainer">
+        <button id="loadMore">LOAD MORE</button>
+      </div>
+
+      <div class="loader-container">
+        <p>Loading...</p>
+        <div class="loader"></div>
+      </div>
     </main>
+
+    <section class="newsletter-container">
+      <div class="newsletter-elements">
+        <div class="newsletterImage">
+          <img src="/images/highRes_newsletter2.png" alt="" />
+        </div>
+        <div class="newsletter-items">
+          <div class="subscribeText">
+            <h4>Subscribe to <b>Our Newsletter!</b></h4>
+            <h5>Stay updated. Don't miss our latest Tavel Blogs!</h5>
+          </div>
+
+          <div class="newsletter-input">
+            <input
+              id="newsletterEmail"
+              type="email"
+              placeholder=" &#xf0e0; Your Email"
+              style="font-family: Arial, FontAwesome"
+            />
+            <button id="newsletterSubscribeButton" type="submit">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="l-footer">
+      <div class="footer-container">
+        <div class="footerElements">
+          <div class="footer-logo">
+            <img src="/images/exploreWhiteText.png" alt="" />
+          </div>
+          <div class="footerItems">
+            <div class="contactDetails">
+              <p>
+                If you have any questions, don't hesitate to reach out to us.
+                Feel free to contact us via phone, email, or our convenient
+                <a href="#">contact form</a>.
+              </p>
+              <p>
+                <i class="fa-sharp fa-solid fa-location-dot"></i> Mølleparken 4,
+                0459 Oslo
+              </p>
+              <p><i class="fa-solid fa-phone-flip"></i> +47 68 35 67</p>
+              <p><i class="fa-solid fa-envelope"></i> explore@gmail.com</p>
+            </div>
+
+            <div class="socialDetails">
+              <h6>Social</h6>
+              <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+              <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+              <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            </div>
+
+            <div class="footer-about">
+              <h6>About</h6>
+              <a href="">Contact us</a>
+              <a href="">About us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <small>Created with ❤️ by _REPLACE_</small> -->
+    </footer>
   </body>
 </html>

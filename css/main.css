@@ -200,7 +200,7 @@ li {
 }
 
 .menuButton:hover div {
-  color: var(--secondary-accent-color);
+  color: var(--secondary-color);
 }
 
 @keyframes navLinkFade {
@@ -594,6 +594,10 @@ footer {
   overflow: scroll;
 }
 
+footer a, p {
+  color: #ffffff;
+}
+
 footer::-webkit-scrollbar {
   display: none;
 }
@@ -630,6 +634,7 @@ footer::-webkit-scrollbar {
 .contactDetails p {
   font-size: 17px;
   width: 100%;
+  color: #fff;
 }
 
 .contactDetails p:nth-child(1) {
@@ -690,6 +695,7 @@ footer::-webkit-scrollbar {
   transition: 0.3s ease-in-out;
   font-weight: 500;
   font-size: 18px;
+  color: #fff;
 }
 
 .socialDetails p:hover {

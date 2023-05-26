@@ -1,4 +1,8 @@
-/* -------------BODY BACKGROUND----------------- */
+.headerBlogPage{
+  padding-top: 15px;
+  box-shadow:  20px 20px 14px #f2f2f2,
+             -20px -20px 14px #ffffff;
+}
 html {
   overflow-y: scroll;
 }
@@ -127,7 +131,7 @@ li {
 }
 
 .menuButton:hover div {
-  background-color: #fff;
+  background-color: var(--secondary-color);
 }
 
 @keyframes navLinkFade {
@@ -162,7 +166,7 @@ li {
   align-items: center;
   flex-direction: row;
   width: 350px;
-  margin: 20px 15px 50px 10px;
+  margin: 50px 15px 50px 10px;
 }
 
 .pageTitle {
@@ -170,6 +174,7 @@ li {
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin: 30px 0 50px 0;
 }
 
 .pageTitle span {
@@ -182,7 +187,7 @@ p,
 span {
   font-size: 1rem;
   font-weight: 500;
-  color: darkgray;
+  color: rgb(73, 73, 73);
 }
 .pageTitle a {
   background-image: linear-gradient(rgb(88, 88, 88), rgb(88, 88, 88));
@@ -210,6 +215,7 @@ span {
 .placesElements {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .placesItems {
@@ -227,14 +233,15 @@ span {
 
 .category-title h2 {
   font-weight: bold;
-  font-size: 21px;
+  font-size: 35px;
+  font-family: sans-serif;
 }
 
 .category-title p {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
   width: 325px;
-  color: rgb(136, 136, 136);
+  color: rgb(95, 95, 95);
 }
 
 .placesList {
@@ -257,7 +264,25 @@ span {
   border-radius: 50px;
   font-weight: 500;
   color: var(--primary-color);
+  cursor: pointer;
 }
+
+.placesList li:hover{
+  background-color:#ffa963ec;
+  color: #fff;
+  box-shadow:1px 1px 10px #ffa963ec;
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transform: scale(1.1);
+}
+
+.placesList li:active{
+  background-color: #f87e1a;
+  color: #fff;
+  box-shadow:1px 1px 10px var(--secondary-color);
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transform: scale(1.02);
+}
+
 
 /*------------ SORT BUTTONS--------------- */
 .sortButton-elements {
@@ -293,6 +318,15 @@ span {
   align-items: center;
   border-radius: 5px;
   outline: 0px;
+  transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#selectOption:hover{
+  transform: scale(1.02);
+}
+
+#selectOption:active{
+  transform: scale(1.02);
 }
 
 #selectOption option[value="AZ"] {
@@ -304,7 +338,7 @@ span {
   color: var(--primary-color);
   font-weight: 500;
   width: 90px;
-  background: #fff;
+  background-color: #ffffff;
 }
 
 /*------------ SEARCH INPUT--------------- */
@@ -324,18 +358,53 @@ span {
   outline: 0px;
 }
 
+/* LOADER */
+.loader{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  border: 2px solid;
+  position: relative;
+}
+
+.loader::before{
+  content:'';
+  position: absolute;
+  margin: 5px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: var(--secondary-color);
+  animation: loading 2s infinite;
+}
+
+
+@keyframes loading{
+  100%{
+    inset:0
+  }
+}
+
+
+
+/* ---------------------Travel Blog Post___________________ */
+
+
 .travelBlogs-container h3 {
   display: flex;
   align-items: center;
-  font-size: var(--menu-font-size);
+  font-size: 25px;
   font-weight: bold;
-  margin: 15px;
+  margin: 15px 0 80px 15px;
 }
 
 .travelBlogs-container {
   display: flex;
   flex-direction: column;
-  width: 390px;
+  margin: var(--content-spacing) 0;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .travelBlogsItem::-webkit-scrollbar {
@@ -353,7 +422,110 @@ span {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
 }
 
+
+.loadMoreContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loadMore{
+  width: 180px;
+  height: 45px;
+  border-radius: 50px;
+  background-color:var(--secondary-accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#loadMore:hover{
+  background-color: #ffa963ec;
+  color: #fff;
+  box-shadow:1px 1px 10px #ffa963ec;
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+#loadMore:active{
+  background-color: #ffa963ec;
+  color: #fff;
+  box-shadow:1px 1px 10px #ffa963ec;
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .map::before {
+    transform: translate(-50%, 20%);
+
+  }
+
+  .search input {
+    width: 450px;
+    margin: 50px 0;
+
+}
+
+  .containerParent{
+    display: flex;
+    justify-content: center;
+  }
+
+  .placesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .placesItems {
+    width: 90%;
+}
+
+
+
+  .cards-blogsPage{
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .containerParent{
+    display: flex;
+    justify-content: start;
+
+  }
+
+  .map::before {
+    transform: translate(-50%, 10%);
+    background-size: contain;
+    width: 80%;
+  }
+
+  .placesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.cards-blogsPage {
+  width: 385px;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+  .travelBlogsItem {
+    display: flex;
+    margin: 10px;
+    scroll-snap-type: x mandatory;
+    flex-direction: column;
+}
+}
 

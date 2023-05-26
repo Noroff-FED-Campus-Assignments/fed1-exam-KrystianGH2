@@ -1,6 +1,6 @@
 /*---------BLOG POSTS CARDS-------------- */
 
-.titleTags{
+.titleTags {
   font-size: 13px;
   font-weight: 400;
   line-height: 15px;
@@ -9,15 +9,11 @@
 .cardDetail-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .blogCards {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
   width: 100%;
   padding: 5px;
@@ -80,18 +76,6 @@
   line-height: 20px;
   padding: 20px 0;
 }
-.wp-block-gallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-}
-
-.wp-block-gallery img {
-  width: 310px;
-}
 
 /* -----------DiVIDER SECTION------------- */
 
@@ -99,7 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2% 2%;
+  margin: 2% 10px;
 }
 
 .line {
@@ -109,7 +93,6 @@
   border-radius: 5px;
   margin-top: 50px;
 }
-
 
 /* ----------SHARE/COMMENT SECTION -----------*/
 
@@ -205,15 +188,15 @@
 
 #commentSection {
   display: none;
-  flex-direction:column;
+  flex-direction: column;
   gap: 10px;
   padding: 10px;
-  margin: 20px 10px var(--content-spacing) 10px ;
+  margin: 20px 10px var(--content-spacing) 10px;
   border: 1px solid #494949;
   border-radius: 5px;
 }
 
-.fa-user{
+.fa-user {
   display: flex;
   color: var(--primary-color);
   background-color: var(--secondary-accent-color);
@@ -222,7 +205,6 @@
   border-radius: 50px;
   align-items: center;
   justify-content: center;
-
 }
 .commentText {
   font-weight: 500;
@@ -231,7 +213,7 @@
   height: 30px;
 }
 
-.comment{
+.comment {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -239,7 +221,7 @@
   margin: 10px 0;
 }
 
-.commentDates{
+.commentDates {
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-accent-color);
@@ -248,7 +230,71 @@
   padding-left: 10px;
   padding-top: 3px;
 }
-.commentTimeStamp{
+.commentTimeStamp {
   font-size: 13px;
 }
 
+@media screen and (min-width: 1020px) {
+  .commentElement {
+    width: 600px;
+  }
+
+  .cardDetail-container {
+    justify-content: left;
+  }
+
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+ 
+
+  .blogTitle-details {
+    color: var(--primary-color);
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0px 50px;
+    width: 800px;
+  }
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 800px;
+  }
+
+  .cardDetail-container {
+    justify-content: center;
+  }
+  .groupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40% 0 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .groupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20%;
+  }
+  .blogCards {
+    align-items: center;
+  }
+
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 1000px;
+  }
+}
