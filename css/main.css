@@ -903,6 +903,7 @@ footer::-webkit-scrollbar {
 
   .slider {
     gap: 25px;
+    overflow: hidden;
   }
 
   .trendingPostsElements {
