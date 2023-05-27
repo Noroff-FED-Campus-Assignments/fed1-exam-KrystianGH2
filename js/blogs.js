@@ -1,4 +1,4 @@
-import { navFunction } from "./navigation.js";
+import { navFunction, errorMessage } from "./navigation.js";
 navFunction();
 
 const travelBlogs = document.querySelector(".travelBlogsElements");
@@ -88,8 +88,8 @@ const getBlogs = async (searchValue = "") => {
       }
     }
     isLoaded = true;
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    travelBlogs.innerHTML = `${errorMessage}`
   }
 };
 

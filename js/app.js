@@ -1,4 +1,4 @@
-import { navFunction } from "./navigation.js";
+import { navFunction, errorMessage } from "./navigation.js";
 navFunction();
 
 const slider = document.querySelector(".slider");
@@ -33,11 +33,9 @@ const getBlogs = async () => {
       const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
       let blogTitle = blogsItems[i].title.rendered;
       const categoryId = blogsItems[i].categories[0];
-      const loader  = document.querySelector(".loader-container");
+      const loader = document.querySelector(".loader-container");
 
       const categoryName = await getCategoryName(categoryId);
-
-
 
       if (categoryName.startsWith("L")) {
         loader.innerHTML = "";
@@ -115,8 +113,8 @@ const getBlogs = async () => {
     prevButton.addEventListener("click", () => {
       previousSlide();
     });
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    slider.innerHTML = `${errorMessage}`;
   }
 };
 

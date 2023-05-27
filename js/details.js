@@ -4,7 +4,7 @@ const postId = params.get("id");
 const tabTitle = document.querySelector('.htmlTab');
 const title = document.querySelector('.titleTags')
 
-import { navFunction } from "./navigation.js";
+import { navFunction, errorMessage } from "./navigation.js";
 navFunction();
 
 const cardHolder = document.querySelector(".cardHolder");
@@ -14,6 +14,7 @@ const url =
   "https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts/" +
   postId +
   "/?_embed";
+  const loader = document.querySelector(".loader-container");
 async function getBlogs() {
   try {
     const data = await fetch(url, options);
@@ -22,7 +23,7 @@ async function getBlogs() {
 
     const content = blogPosts.content.rendered;
     const htmlTitle = blogPosts.title.rendered;
-
+    loader.innerHTML = "";
     cardHolder.innerHTML += `
     <div class="blogCards">
     <h1 class="blogTitle-details">${blogPosts.title.rendered}</h1>
@@ -155,8 +156,10 @@ const getBlogs2 = async () => {
     prevButton.addEventListener("click", () => {
       previousSlide();
     });
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    cardHolder.innerHTML = `${errorMessage}`;
+    slider.innerHTML = `${errorMessage}`;
+   
   }
 };
 
