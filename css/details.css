@@ -96,6 +96,20 @@
 
 /* ----------SHARE/COMMENT SECTION -----------*/
 
+.groupContainerParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.groupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
 .shareItems {
   display: flex;
   flex-direction: row;
@@ -171,14 +185,13 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  position: relative;
 }
 
 .commentElement {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
-  margin: var(--content-spacing) 0 10px 0;
+  width: 100%;
+  margin: 0 0 0 15px;
 }
 
 .commentElement label {
@@ -186,12 +199,17 @@
   font-weight: 500;
 }
 
+#commentForm {
+  display: flex;
+  height: 150px;
+}
+
 #commentSection {
   display: none;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  margin: 20px 10px var(--content-spacing) 10px;
+  margin: 20px 10px 10px 10px;
   border: 1px solid #494949;
   border-radius: 5px;
 }
@@ -218,7 +236,6 @@
   flex-direction: row;
   align-items: center;
   gap: 15px;
-  margin: 10px 0;
 }
 
 .commentDates {
@@ -234,13 +251,10 @@
   font-size: 13px;
 }
 
-@media screen and (min-width: 1020px) {
-  .commentElement {
-    width: 600px;
-  }
 
-  .cardDetail-container {
-    justify-content: left;
+@media screen and (min-width: 1020px) {
+  .groupContainer {
+    width: 800px;
   }
 
   .blogContent {
@@ -249,11 +263,27 @@
     gap: 30px;
     width: 800px;
   }
+
+  .blogCards {
+    align-items: center;
+  }
+
+  .dividerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divider {
+    width: 800px;
+  }
+  .shareConatiner {
+    width: 820px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
- 
-
   .blogTitle-details {
     color: var(--primary-color);
     font-family: sans-serif;
@@ -268,24 +298,18 @@
     gap: 30px;
     width: 800px;
   }
-
-  .cardDetail-container {
-    justify-content: center;
-  }
-  .groupContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 40% 0 0;
-  }
 }
 
 @media screen and (min-width: 1920px) {
   .groupContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 20%;
+    width: 1000px;
+  }
+
+  .divider {
+    width: 1000px;
+  }
+  .shareConatiner {
+    width: 1000px;
   }
   .blogCards {
     align-items: center;
