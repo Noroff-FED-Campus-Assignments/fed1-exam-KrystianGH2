@@ -22,8 +22,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/style.css" />
-    <script defer type="module" src="js/app.js"></script>
-    <title>Explore</title>
+    <script defer type="module" src="js/contact.js"></script>
+    <title>Contact Page</title>
   </head>
 
   <body>
@@ -63,7 +63,93 @@
       </div>
     </header>
 
-    <main class="main">  <section class="contactContainerHolder">
+    <div class="modalContainer">
+      <div class="modalItems">
+        <div class="modal">
+        <h1>Thank you for reaching out to us!</h1>
+        <p>
+          We greatly appreciate your message. Rest assured, our team will
+          promptly review it and get back to you as soon as possible. Your
+          patience is highly valued.
+        </p>
+
+        <a href="index.html"><button class="backHome">Home Page</button></a>
+      </div></div>
+    </div>
+
+    <main class="main">
+      <div class="connectWithUs-container">
+        <div class="connectWithUs-elements">
+          <div class="connectWithUs-items">
+            <div class="contactGroup1">
+              <h1 class="contactTitle">Send a message</h1>
+              <p>
+                We would love to hear from you! Whether you have a question,
+                suggestion, or simply want to say hello, feel free to reach out
+                to us. Our team is here to assist you.
+              </p>
+
+              <button class="contactButton">Contact us</button>
+            </div>
+            <img src="/images/connectWithUs.jpg" alt="" />
+          </div>
+        </div>
+
+        <section>
+          <div class="form-section-container">
+            <div class="form-section-items">
+              <form id="form" autocomplete="on">
+                <div class="input-group">
+                  <label class="labelJs nameLabel" for="name">Full name</label>
+                  <input required type="name" class="inputNameJs inputJs" />
+                  <span class="input-highlight"></span>
+                  <span class="inputJs-error inputJs-error-name"
+                    >Name must be at least 2 characters</span
+                  >
+                </div>
+
+                <div class="input-group">
+                  <label class="labelJs emailLabel" for="email">Email</label>
+                  <input required type="email" class="inputJs inputEmailJs" />
+                  <span class="input-highlight2"></span>
+                  <span class="inputJs-error inputJs-error-email"
+                    >Please enter a valid email address</span
+                  >
+                </div>
+
+                <div class="input-group">
+                  <label class="labelJs subjectLabel" for="text">Subject</label>
+                  <input required type="text" class="inputJs inputsubjectJs" />
+                  <span class="input-highlight3"></span>
+                  <span class="inputJs-error inputJs-error-subject"
+                    >Subject must be at least 15 characters</span
+                  >
+                </div>
+
+                <div class="input-group">
+                  <label class="labelJs textareaLabel" for="textarea"
+                    >Message</label
+                  >
+                  <textarea
+                    required
+                    class="inputJs-textArea"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                  <span class="inputJs-error inputJs-error-textarea">
+                    Message must be at least 25 characters
+                  </span>
+                </div>
+                <input class="submitButton" type="submit" />
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="contactContainerHolder">
         <div class="contactParentContainer">
           <div class="contactContainer">
             <div class="contactGroup1">
@@ -114,63 +200,6 @@
           </div>
         </div>
       </section>
-      <div class="connectWithUs-container">
-        <div class="connectWithUs-elements">
-          <div class="connectWithUs-items">
-            <div class="contactGroup1">
-              <h1 class="contactTitle">Send a message</h1>
-              <p>
-                We would love to hear from you! Whether you have a question,
-                suggestion, or simply want to say hello, feel free to reach out
-                to us. Our team is here to assist you.
-              </p>
-
-              <button class="contactButton">Contact us</button>
-            </div>
-            <img src="/images/connectWithUs.jpg" alt="" />
-          </div>
-        </div>
-
-
-
-        <section >
-            <div class="form-section-container">
-                <div class="form-section-items">
-                    <form>
-                        <div class="input-group">
-                            <label class="labelJs nameLabel"  for="name">Full name</label>
-                            <input type="name" class="inputJs" >
-                            <span class="inputJs-error inputJs-error-name">Please enter your name</span>
-                        </div>
-
-                        <div class="input-group">
-                            <label  class="labelJs emailLabel" for="email">Email</label>
-                            <input type="email" class="inputJs " >
-                            <span class="inputJs-error inputJs-error-email">Please enter a valid email address</span>
-                        </div>
-
-                        <div class="input-group">
-                            <label  class="labelJs subjectLabel" for="text">Subject</label>
-                            <input type="text" class="inputJs">
-                            <span class="inputJs-error inputJs-error-subject">Subject must be at least 5 characters</span>
-                        </div>
-
-                        <div class="input-group">
-                            <label  class="labelJs textareaLabel" for="textarea">Message</label>
-                            <textarea class="inputJs-textArea" name="" id="" cols="30" rows="10"></textarea>
-                            <span class="inputJs-error inputJs-error-textarea">
-                                Message must be at least 20 characters
-                            </span>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </section>
-      </div>
-
-    
-     
     </main>
 
     <footer class="l-footer">
