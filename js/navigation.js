@@ -1,4 +1,4 @@
-export { navFunction };
+export { navFunction, errorMessage } ;
 
 const navFunction = () => {
   const navLinks = document.querySelector(".nav-links");
@@ -22,3 +22,7 @@ const navFunction = () => {
 };
 
 navFunction();
+
+
+const errorMessage = `<div class="errorMessage">Apologies! We're experiencing a temporary issue fetching the latest travel blog data. Our team is working to fix it. Please bear with us.</div>`
+
