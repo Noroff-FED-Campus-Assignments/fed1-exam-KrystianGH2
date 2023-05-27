@@ -8,7 +8,10 @@
       href="/images/explore-website-favicon-color.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="details page" content="Travel blog post, viewing specific post" />
+    <meta
+      name="details page"
+      content="Travel blog post, viewing specific post"
+    />
     <meta name="keywords" content="HTML, CSS, JavaScript," />
     <meta name="Krystian Gere" content="Krystian Gere" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,16 +28,21 @@
     <script defer type="module" src="js/details.js"></script>
     <title class="htmlTab"></title>
     <!-- Hotjar Tracking Code for Explore Travel Blog Site -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3510070,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3510070, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
 
   <body class="detailsPage">
@@ -73,7 +81,6 @@
         </div>
       </div>
     </header>
-    
 
     <main>
       <div class="pageTitleContainer">
@@ -88,52 +95,54 @@
           <div class="cardHolder">
             <div class="loader-container">
               <p>Loading...</p>
-              <div class="loader"></div></div>
-            
+              <div class="loader"></div>
+            </div>
           </div>
         </div>
       </section>
-      <div class="groupContainer">
-        <section class="dividerContainer">
-          <div class="divider">
-            <span class="line"></span>
-          </div>
+      <section class="groupContainerParent">
+        <div class="groupContainer">
+          <section class="dividerContainer">
+            <div class="divider">
+              <span class="line"></span>
+            </div>
 
-          <div class="shareConatiner">
-            <div class="shareItems">
-              <p>Share</p>
-              <div class="shareIcons">
-                <li class="shareIconLi">
-                  <i class="fa-brands fa-twitter"></i>
-                </li>
-                <li class="shareIconLi">
-                  <i class="fa-brands fa-facebook"></i>
-                </li>
-                <li class="shareIconLi">
-                  <i class="fa-brands fa-instagram"></i>
-                </li>
+            <div class="shareConatiner">
+              <div class="shareItems">
+                <p>Share</p>
+                <div class="shareIcons">
+                  <li class="shareIconLi">
+                    <i class="fa-brands fa-twitter"></i>
+                  </li>
+                  <li class="shareIconLi">
+                    <i class="fa-brands fa-facebook"></i>
+                  </li>
+                  <li class="shareIconLi">
+                    <i class="fa-brands fa-instagram"></i>
+                  </li>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <form id="commentForm">
-          <div class="commentElement">
-            <label for="commentInput">Comments</label><br />
-            <div class="inputGroup">
-              <input
-                id="commentInput"
-                type="text"
-                placeholder="Write a comment..."
-                required
-              />
-              <button class="postButton">Post</button>
+          <form id="commentForm">
+            <div class="commentElement">
+              <label for="commentInput">Comments</label><br />
+              <div class="inputGroup">
+                <input
+                  id="commentInput"
+                  type="text"
+                  placeholder="Write a comment..."
+                  required
+                />
+                <button class="postButton">Post</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
 
-        <div id="commentSection"></div>
-      </div>
+          <div id="commentSection"></div>
+        </div>
+      </section>
 
       <section class="carouselContent">
         <div class="latestPost">
@@ -155,7 +164,6 @@
       </section>
     </main>
 
-    
     <div id="imgModal" class="modal">
       <span class="close">&times;</span>
       <img id="modalImages" src="" alt="Modal Image" />
