@@ -88,13 +88,13 @@ All of these todo's must be done to pass the asssignment.
 
 - [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
-  - [ ] Is user-friendly
+  - [x] Is user-friendly
   - [ ] Effective use of the pillars of design
-    - [ ] Typography
-    - [ ] Colour
+    - [x] Typography
+    - [x] Colour
     - [ ] Composition
-    - [ ] Art Direction
-    - [ ] Motion
+    - [x] Art Direction
+    - [x] Motion
   - [ ] Adhered to principles of design
     - [ ] Contrast
     - [ ] Balance and alignment
@@ -138,7 +138,7 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] There are no error messages in the terminal when I run the project.
 - [x] My code is indented correctly.
 - [ ] I've checked my report for grammer & spelling using grammerly or chatGPT
-- [ ] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [x] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [ ] I've checked off every todo in this README.
 
 ## Help & Tutorials
