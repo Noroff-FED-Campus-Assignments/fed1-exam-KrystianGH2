@@ -1,4 +1,9 @@
-import { navFunction, errorMessage } from "./navigation.js";
+import {
+  navFunction,
+  errorMessage,
+  openModal,
+  closeModal,
+} from "./navigation.js";
 navFunction();
 
 const travelBlogs = document.querySelector(".travelBlogsElements");
@@ -13,7 +18,7 @@ const liOceania = document.querySelector(".oceania-li");
 const selectOption = document.querySelector("#selectOption");
 
 const searchEl = document.querySelector(".search");
-const loader  = document.querySelector(".loader-container");
+const loader = document.querySelector(".loader-container");
 
 searchEl.addEventListener("input", async (e) => {
   setTimeout(async () => {
@@ -64,7 +69,7 @@ const getBlogs = async (searchValue = "") => {
       if (blogTitle.toLowerCase().includes(searchValue)) {
         const featuredImage =
           blogsItems[i]._embedded["wp:featuredmedia"][0].media_details.sizes
-            .medium.source_url;
+            .full.source_url;
 
         const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
 
@@ -87,9 +92,21 @@ const getBlogs = async (searchValue = "") => {
       `;
       }
     }
+    const cardsImg = document.querySelector(".cardsImg");
+    const images = document.querySelectorAll(".cardsImg");
+    const closeModalButton = document.querySelector(".close");
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        cardsImg.style.width = "100%";
+        openModal(image);
+        closeModalButton.addEventListener("click", () => {
+          closeModal();
+        });
+      });
+    });
     isLoaded = true;
   } catch (error) {
-    travelBlogs.innerHTML = `${errorMessage}`
+    travelBlogs.innerHTML = `${errorMessage}`;
   }
 };
 

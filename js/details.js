@@ -1,10 +1,15 @@
 const myUrlValues = window.location.search;
 const params = new URLSearchParams(myUrlValues);
 const postId = params.get("id");
-const tabTitle = document.querySelector('.htmlTab');
-const title = document.querySelector('.titleTags')
+const tabTitle = document.querySelector(".htmlTab");
+const title = document.querySelector(".titleTags");
 
-import { navFunction, errorMessage } from "./navigation.js";
+import {
+  navFunction,
+  errorMessage,
+  openModal,
+  closeModal,
+} from "./navigation.js";
 navFunction();
 
 const cardHolder = document.querySelector(".cardHolder");
@@ -14,7 +19,7 @@ const url =
   "https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts/" +
   postId +
   "/?_embed";
-  const loader = document.querySelector(".loader-container");
+const loader = document.querySelector(".loader-container");
 async function getBlogs() {
   try {
     const data = await fetch(url, options);
@@ -32,8 +37,8 @@ async function getBlogs() {
     
     `;
 
-    tabTitle.innerHTML += `${htmlTitle} `
-    title.innerHTML += `${htmlTitle}`
+    tabTitle.innerHTML += `${htmlTitle} `;
+    title.innerHTML += `${htmlTitle}`;
   } catch (err) {
     console.log(err);
   }
@@ -81,6 +86,7 @@ const renderedComments = () => {
     commentSection.style.display = "flex";
   }
 };
+
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector("#prev-button");
 const nextButton = document.querySelector("#next-button");
@@ -128,6 +134,18 @@ const getBlogs2 = async () => {
             `;
       }
     }
+    const cardsImg = document.querySelector(".cardsImg");
+    const images = document.querySelectorAll(".cardsImg");
+    const closeModalButton = document.querySelector(".close");
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        cardsImg.style.width = "100%";
+        openModal(image);
+        closeModalButton.addEventListener("click", () => {
+          closeModal();
+        });
+      });
+    });
 
     const carouselItems = document.querySelectorAll(".cards");
     let currentIndex = 0;
@@ -159,7 +177,6 @@ const getBlogs2 = async () => {
   } catch (error) {
     cardHolder.innerHTML = `${errorMessage}`;
     slider.innerHTML = `${errorMessage}`;
-   
   }
 };
 
