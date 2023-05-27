@@ -513,7 +513,7 @@ main::after {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50vh;
+  height: 500px;
   background-color: var(--secondary-accent-color);
   margin: var(--content-spacing) 0;
   align-items: center;
@@ -757,7 +757,6 @@ footer::-webkit-scrollbar {
   }
 
   .newsletter-elements {
-    height: 35vh;
     margin: var(--content-spacing) 0;
   }
 
@@ -973,7 +972,6 @@ footer::-webkit-scrollbar {
     align-items: center;
   }
   .newsletter-elements {
-    height: 40vh;
     width: 80vw;
   }
 
