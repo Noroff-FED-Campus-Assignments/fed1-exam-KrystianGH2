@@ -136,7 +136,7 @@ li {
   justify-content: center;
   gap: 120px;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0vh;
   right: 0px;
   background-color: var(--secondary-accent-color);
