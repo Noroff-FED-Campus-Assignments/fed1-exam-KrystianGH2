@@ -1,5 +1,5 @@
 /* confirmation modal */
-.modal {
+.modal-c {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,17 +9,17 @@
   overflow: hidden;
 }
 
-.modal h1 {
+.modal-c h1 {
   font-size: 40px;
   text-align: center;
   font-weight: 500;
 }
 
-.modal p {
+.modal-c p {
   text-align: center;
 }
 
-.modal button {
+.modal-c button {
   width: 220px;
   height: 45px;
   color: #ffffff;
