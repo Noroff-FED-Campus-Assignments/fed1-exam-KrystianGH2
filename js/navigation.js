@@ -1,4 +1,4 @@
-export { navFunction, errorMessage } ;
+export { navFunction, errorMessage, openModal, closeModal} ;
 
 const navFunction = () => {
   const navLinks = document.querySelector(".nav-links");
@@ -26,3 +26,18 @@ navFunction();
 
 const errorMessage = `<div class="errorMessage">Apologies! We're experiencing a temporary issue fetching the latest travel blog data. Our team is working to fix it. Please bear with us.</div>`
 
+ function openModal (image){
+  const modal = document.querySelector("#imgModal");
+  const modalImage = document.querySelector("#modalImages")
+  modal.style.display = "block";
+  modalImage.src = image.src
+}
+
+function closeModal (){
+  const closeModalButton = document.querySelector(".close");
+  const  modal = document.querySelector("#imgModal");
+  closeModalButton.addEventListener("click", () =>{
+    modal.style.display = "none"
+
+  })
+}
