@@ -333,6 +333,7 @@ main::after {
   gap: 20px;
   transition: transform 0.5s ease-in-out;
   margin: 0 10px;
+  overflow: hidden;
 }
 
 .cards {
