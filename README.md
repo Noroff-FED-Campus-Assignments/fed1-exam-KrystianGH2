@@ -15,9 +15,9 @@ This project was bootstrapped with Vite.
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
 - [Design](_LINK_TO_FIGMA_)
 - [Production deploy](https://exploretravelsite.netlify.app)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
-- [API Endpoint](_LINK_TO_API_DOC)
+- [Deployment CI](https://app.netlify.com/sites/exploretravelsite/deploys)
+- [API Docs](https://developer.wordpress.org/rest-api/using-the-rest-api/)
+- [API Endpoint](https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts)
 
 ## Deployment
 
@@ -78,7 +78,7 @@ All of these todo's must be done to pass the asssignment.
   - [x] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
 - [x] CSS uses variables
-- [ ] Code is dry - There are no repeating functions, variables.
+- [x] Code is dry - There are no repeating functions, variables.
 - [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [x] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
@@ -86,26 +86,26 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [x] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
-- [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
+- [x] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
   - [x] Is user-friendly
-  - [ ] Effective use of the pillars of design
+  - [x] Effective use of the pillars of design
     - [x] Typography
     - [x] Colour
-    - [ ] Composition
+    - [x] Composition
     - [x] Art Direction
     - [x] Motion
-  - [ ] Adhered to principles of design
-    - [ ] Contrast
-    - [ ] Balance and alignment
-    - [ ] Emphasis
-    - [ ] Proportion
-    - [ ] Hiearchy
-    - [ ] Repetition
-    - [ ] Ryhthem
-    - [ ] Pattern
-    - [ ] Negative space
-    - [ ] Movement
+  - [x] Adhered to principles of design
+    - [x] Contrast
+    - [x] Balance and alignment
+    - [x] Emphasis
+    - [x] Proportion
+    - [x] Hiearchy
+    - [x] Repetition
+    - [x] Ryhthem
+    - [x] Pattern
+    - [x] Negative space
+    - [x] Movement
 
 ## Checklist
 
