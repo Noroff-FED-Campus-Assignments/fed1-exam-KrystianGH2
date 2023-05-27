@@ -111,7 +111,7 @@ const getBlogs2 = async () => {
     for (let i = 0; i < blogsItems.length; i++) {
       const featuredImage =
         blogsItems[i]._embedded["wp:featuredmedia"][0].media_details.sizes
-          .medium.source_url;
+          .full.source_url;
 
       const altText = blogsItems[i]._embedded["wp:featuredmedia"][0].alt_text;
       let blogTitle = blogsItems[i].title.rendered;
