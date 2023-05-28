@@ -2,48 +2,209 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/explore-website-favicon-color.png"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="main page" content="home page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript," />
+    <meta name="Author" content="Krystian Gere" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+    <script defer type="module" src="js/app.js"></script>
+    <title>Explore</title>
+    <!-- Hotjar Tracking Code for Explore Travel Blog Site -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3510070,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
   </head>
-  <body class="animate__animated animate__fadeIn">
-    <header class="l-header">
-      <h1>Home</h1>
+
+  <body>
+    <header class="hero">
+      <div class="navigation">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/explore_Logo.png" alt="Explore"
+          /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="nav-links2">
+          <li><a class="navLinks" href="index.html">Home</a></li>
+          <li><a class="navLinks" href="blogs.html">Blogs</a></li>
+          <li><a class="navLinks" href="about.html">About</a></li>
+          <li><a class="navLinks" href="contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="socialLinks">
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+
+        <div class="menuButton">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+
+      <div class="heroImg-text">
+        <h1><b>Explore</b> the <b>Best</b> <b>Lovely</b> <b>Places</b></h1>
+        <div class="hero-items">
+          <p>
+            Discover awe-inspiring destinations! Get lost in captivating
+            stories, stunning photos, and expert tips that ignite your passion
+            for travel. Join us on our travel blog for unforgettable adventures.
+          </p>
+        </div>
+        <a href="blogs.html"><button class="ctaButton"> Explore</button></a> 
+      </div>
     </header>
 
-    <main class="l-main">
-      <section role="search"></section>
+    <main class="main">
 
-      <article role="doc-introduction">
-        <h2>List</h2>
+      <div class="loader-container">
+        <p>Loading...</p>
+        <div class="loader"></div></div>
+      
 
-        <img
-          src="/placeholder.jpg"
-          loading="lazy"
-          alt="…"
-          class="u-img hero-image"
-          width="1024"
-          height="1024"
-        />
+      <section class="carouselContent">
+        <div class="latestPost">
+          <h3>Our Latest Post</h3>
+        </div>
+        <div class="carouselParentConatiner">
+          <div class="carousel-container">
+            <div class="carouselItems">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev-button">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button id="next-button">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
 
-        <p>_REPLACE_INTRODUCTION_</p>
-      </article>
+      <section class="postContainerGroup">
+        <section class="trendingPost-container">
+          <h3 class="h3Hidden2">Trending Posts</h3>
+          <div class="trendingPostItem">
+            <h3 class="h3hidden">Trending Posts</h3>
+            <div class="trendingPostsElements"></div>
+          </div>
+        </section>
 
+        <section class="latestAcategory-container">
+          <h3 class="h3Hidden2">Our Latest From Europe</h3>
+          <div class="latestFromItems">
+            <h3 class="h3hidden">Our Latest From Europe</h3>
+            <div class="latestFromElements"></div>
+          </div>
+        </section>
+      </section>
       <section role="list">
-        <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
+      </section>
+
+      
+      <section class="newsletter-container">
+        <div class="newsletter-elements">
+          <div class="newsletterImage">
+            <img src="/images/highRes_newsletter2.png" alt="" />
+          </div>
+          <div class="newsletter-items">
+            <div class="subscribeText">
+              <h4>Subscribe to <b>Our Newsletter!</b></h4>
+              <h5>Stay updated. Don't miss our latest Tavel Blogs!</h5>
+            </div>
+
+            <div class="newsletter-input">
+              <input
+                id="newsletterEmail"
+                type="email"
+                placeholder=" &#xf0e0; Your Email"
+                style="font-family: Arial, FontAwesome"
+              />
+              <button id="newsletterSubscribeButton" type="submit">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImages" src="" alt="Modal Image">
+
+    </div>
+
     <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <div class="footer-container">
+        <div class="footerElements">
+          <div class="footer-logo">
+            <img src="/images/exploreWhiteText.png" alt="Explore Logo"/>
+          </div>
+          <div class="footerItems">
+            <div class="contactDetails">
+              <p>
+                If you have any questions, don't hesitate to reach out to us.
+                Feel free to contact us via phone, email, or our convenient
+                <a href="#">contact form</a>.
+              </p>
+              <p>
+                <i class="fa-sharp fa-solid fa-location-dot"></i> Mølleparken 4,
+                0459 Oslo
+              </p>
+              <p><i class="fa-solid fa-phone-flip"></i> +47 68 35 67</p>
+              <p><i class="fa-solid fa-envelope"></i> explore@gmail.com</p>
+            </div>
+
+            <div class="socialDetails">
+              <h6>Social</h6>
+              <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+              <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+              <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            </div>
+
+            <div class="footer-about">
+              <h6>About</h6>
+              <a href="contact.html">Contact us</a>
+              <a href="about.html">About us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <small>Created with ❤️ by _REPLACE_</small> -->
     </footer>
   </body>
 </html>

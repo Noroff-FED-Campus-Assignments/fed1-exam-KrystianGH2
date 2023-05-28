@@ -1,9 +1,18 @@
-/*!
- * Variables
- * @tutorial https://web.dev/at-property/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-4/css-variables
- */
-
 :root {
-  /* Add your CSS variables here */
+  --primary-color: #1c2541;
+  --secondary-color: #ff8629;
+  --accent-color: #76a6da;
+  --secondary-accent-color: #e9f4ff;
+  --menu-font-size: 20px;
+  --content-spacing: 5rem;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url(/fonts/Poppins-SemiBold.ttf);
 }

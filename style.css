@@ -1,13 +1,11 @@
-/* the props */
-@import "open-props/style";
-
 /* optional imports that use the props */
 @import "open-props/normalize";
 @import "animate.css";
-
 @import "css/variables.css";
 @import "css/reset.css";
-@import "css/utilities.css";
-@import "css/layout.css";
-@import "css/form.css";
-@import "css/ui.css";
+@import "css/main.css";
+@import "css/blogs.css";
+@import "css/details.css";
+@import "css/about.css";
+@import "css/contact.css";
+@import "css/modal.css";

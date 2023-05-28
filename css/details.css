@@ -1,0 +1,324 @@
+/*---------BLOG POSTS CARDS-------------- */
+
+.titleTags {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.cardDetail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blogCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 5px;
+}
+
+.blogTitle-details {
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 50px 0;
+}
+
+.wp-element-caption {
+  font-size: 14px;
+  margin: 10px;
+  font-weight: 900;
+}
+.wp-block-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+.wp-block-group p {
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.wp-block-post-date {
+  padding-top: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.blogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wp-block-heading {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.blogCards p {
+  color: var(--primary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 0;
+}
+
+/* -----------DiVIDER SECTION------------- */
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 10px;
+}
+
+.line {
+  background: rgb(138, 137, 137);
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+/* ----------SHARE/COMMENT SECTION -----------*/
+
+.groupContainerParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.groupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.shareItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
+
+.shareIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.shareItems p {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: var(--primary-color);
+}
+
+.fa-brands {
+  color: var(--primary-color);
+  background-color: var(--secondary-accent-color);
+  font-size: 18px;
+}
+
+.fa-brands:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.inputGroup button {
+  height: 45px;
+  width: 60px;
+  color: #ffffff;
+  background-color: black;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.inputGroup button:hover {
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  background-color: var(--secondary-color);
+  transform: scale(1.01);
+  box-shadow: 2px 2px 6px #d9914e, -2px -2px 6px #ffc56a;
+  border-radius: 2px;
+}
+
+.inputGroup input {
+  width: 80%;
+  height: 45px;
+  outline: 0px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  outline: 0px;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 2px;
+}
+::placeholder {
+  color: var(--primary-color);
+  padding: 5px;
+  font-weight: 300;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.commentElement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 0 15px;
+}
+
+.commentElement label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#commentForm {
+  display: flex;
+  height: 150px;
+}
+
+#commentSection {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+  border: 1px solid #494949;
+  border-radius: 5px;
+}
+
+.fa-user {
+  display: flex;
+  color: var(--primary-color);
+  background-color: var(--secondary-accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.commentText {
+  font-weight: 500;
+  color: var(--primary-color);
+  width: 100%;
+  height: 30px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.commentDates {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-accent-color);
+  height: 55px;
+  width: 200px;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.commentTimeStamp {
+  font-size: 13px;
+}
+
+
+@media screen and (min-width: 1020px) {
+  .groupContainer {
+    width: 800px;
+  }
+
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 800px;
+  }
+
+  .blogCards {
+    align-items: center;
+  }
+
+  .dividerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divider {
+    width: 800px;
+  }
+  .shareConatiner {
+    width: 820px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .blogTitle-details {
+    color: var(--primary-color);
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0px 50px;
+    width: 800px;
+  }
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .groupContainer {
+    width: 1000px;
+  }
+
+  .divider {
+    width: 1000px;
+  }
+  .shareConatiner {
+    width: 1000px;
+  }
+  .blogCards {
+    align-items: center;
+  }
+
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 1000px;
+  }
+}
