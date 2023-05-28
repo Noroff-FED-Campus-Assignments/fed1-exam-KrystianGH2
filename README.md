@@ -30,6 +30,8 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 2.1. Introduction
 
 The purpose of this report is to discuss the inspiration behind the creation of Explore, a travel blog website. The website aims to provide a platform for sharing thougths and opinions various travel destination, experiences and tips. The primary objective is to gather insights from customers and build a CRM list for the future product development. The website will utilize a Headless CMS for content management, a REST API to fetch data, and JavaScript for adding functionality. The goal is to represent the brand identity, and the website will be responsive, accessible and easily modifiable. 
+
+
 2.2. Main section of report
 
 The inspiration behind the creation of Explore travel blog website stems from our passion for travel and exploration. Our team comprises enthusiastic travelers who have explored numerous destinations and want to share thie knowledge, insights and recomendations with like-minded individuals.
