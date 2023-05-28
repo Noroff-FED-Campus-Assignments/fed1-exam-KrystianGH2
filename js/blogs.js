@@ -40,9 +40,14 @@ let isLoaded = false;
 selectOption.addEventListener("change", async (e) => {
   e.preventDefault();
   selectedValues = e.target.value;
+
   clearTravelBlogs();
+  travelBlogs.innerHTML = `<div class="loader"></div>`;
   setTimeout(() => {
-    getBlogs();
+    getBlogs().then(() => {
+      const loading = document.querySelector(".loader");
+      loading.style.display = "none";
+    });
   }, 800);
 });
 
