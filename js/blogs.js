@@ -78,7 +78,7 @@ const getBlogs = async (searchValue = "") => {
 
         loader.innerHTML = "";
         travelBlogs.innerHTML += `
-        
+
         <div class="cards cards-blogsPage">
         <img class="cardsImg" src="${featuredImage}" alt="${altText}">
       <a href="details.html?id=${blogsItems[i].id}&${blogTitle}">
@@ -88,7 +88,7 @@ const getBlogs = async (searchValue = "") => {
       <small>${categoryName}</small>
       </div></a>
       </div>
-      
+
       `;
       }
     }
@@ -118,66 +118,58 @@ const sortCards = (blogsItems) => {
   }
 };
 
+const categoryHandler = async (categoryId) => {
+  clearTravelBlogs();
+  travelBlogs.innerHTML = `<div class="loader"></div>`;
+  setTimeout(() => {
+    url = `${url}&categories=${categoryId}`;
+    getBlogs();
+    const loading = document.querySelector(".loader");
+    loading.style.display = "none";
+  }, 800);
+};
 const clearTravelBlogs = () => {
   travelBlogs.innerHTML = "";
 };
 
 liAfrica.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=4`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(4);
 });
 
 liAmericas.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=6`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(6);
 });
 
 liAntarctica.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=5`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(5);
 });
 
 liAsia.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=3`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(3);
 });
 
 liEurope.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=7`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(7);
 });
+
 liOceania.addEventListener("click", async () => {
-  clearTravelBlogs();
-  setTimeout(() => {
-    url = `${url}&categories=8`;
-    getBlogs();
-  }, 800);
+  await categoryHandler(8);
 });
 
 getBlogs();
 
+const loadMoreContainer = document.querySelector(".loadMoreContainer");
 const loadMore = document.querySelector("#loadMore");
 loadMore.addEventListener("click", (e) => {
   e.preventDefault();
-  clearTravelBlogs();
+  loadMoreContainer.innerHTML = `<div class="loader"></div>`;
   setTimeout(() => {
     blogsPostPerPage += 10;
+    console.log(blogsPostPerPage);
     url = `https://marvelous-jargon.flywheelsites.com/wp-json/wp/v2/posts?_embed&per_page=${blogsPostPerPage}`;
-    getBlogs();
+    getBlogs().then(() => {
+      loadMoreContainer.innerHTML = "";
+      loadMoreContainer.appendChild(loadMore);
+    });
   }, 800);
 });
