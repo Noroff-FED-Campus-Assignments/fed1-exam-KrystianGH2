@@ -1,5 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/EF97x2Z3)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11090083&assignment_repo_type=AssignmentRepo)
+
 # FED Exam - Vanilla Front-end Website
 
 This bootstrap template is intended to help you deliever a amazing website which delights your end-users. Feel free to change, remove or start your own project from scratch. Please replace any text which starts with an `_`.
@@ -10,10 +11,8 @@ This project was bootstrapped with Vite.
 
 ## Resources
 
-<!-- You must replace these links -->
-
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
+- [Design](https://www.figma.com/file/DCdF6VqtWLLc2ZWbvzDpGW/Untitled?type=design&node-id=0%3A1&t=32SiFVDG28UjWOp3-1)
 - [Production deploy](https://exploretravelsite.netlify.app)
 - [Deployment CI](https://app.netlify.com/sites/exploretravelsite/deploys)
 - [API Docs](https://developer.wordpress.org/rest-api/using-the-rest-api/)
@@ -28,7 +27,63 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+2.1. Introduction
+
+The purpose of this report is to discuss the inspiration behind the creation of Explore, a travel blog website. The website aims to provide a platform for sharing thougths and opinions various travel destination, experiences and tips. The primary objective is to gather insights from customers and build a CRM list for the future product development. The website will utilize a Headless CMS for content management, a REST API to fetch data, and JavaScript for adding functionality. The goal is to represent the brand identity, and the website will be responsive, accessible and easily modifiable. 
+2.2. Main section of report
+
+The inspiration behind the creation of Explore travel blog website stems from our passion for travel and exploration. Our team comprises enthusiastic travelers who have explored numerous destinations and want to share thie knowledge, insights and recomendations with like-minded individuals.
+
+Our website features: 
+
+2.3. Home Section: 
+
+Home section where we provide our visitors with an appealing design that captures the essence of travel.  It features a image with a brief introduction to the website’s purpose, and highlights the Latests blog posts.
+
+2.4. About Section:
+
+The About section outlines our missions and encourages visitors to join us. It also provides information on how to contact us.
+
+2.5. List of Blog Posts Section:
+
+The List of Blog Post Section displays a collection of our blog post, categorized by destination and travel tips. Each post features a title, a brief of description, and a thumbnail image to inspire readers to explore further.
+
+2.6. Blog Post Specific Details Section:
+
+When our visitors click on a blog post, they wil be directed to a dedicated page displaying the full content. This section includes the main article, additional images, related travel information and practical tips to enhance  reader’s travel experience.
+
+
+2.7. Contact Section:
+
+Our contact section provides a means for users to get in touch with Explore. It include a contact form that includes validation of information such as name, email, subject and message. JavaScript validation ensures that the form is filled out correctly before submission and futher activities.
+
+
+Design Concept
+
+The design concept for the Explore is based on the following principles:
+
+1.1. Color Scheme:
+
+The color palette for Explore incorporates (light sky blue, orange, white and dark blue).
+
+Orange is the primary color, representing energy, enthusiasm, and warmth associated with travel.
+
+Dark blue serves as the secondary color, providing depth and contrast to the design.
+
+Light sky blue is used as the accent color, adding refreshing touch and complementing the primary and secondary colors. This color in my opinion creates a vibrant and inviting visual identity for the website.
+
+1.2. Navigation
+
+A simple and intuitive navigation menu is placed at the top of the page (web version) and top right (menu button to open the menu, for mobile version).
+
+1.3. Main Page
+
+Each post has an animation on hover. It also includes viewing blog post images in a larger size when clicked.
+
+1.4. Footer
+
+The Footer section contains an additional information about Explore, it also provides Explore’s  Social media links as Twitter, Facebook and Instagram.
+
 
 ## Getting Started
 
@@ -137,9 +192,9 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] There are no red underlines in VSCode.
 - [x] There are no error messages in the terminal when I run the project.
 - [x] My code is indented correctly.
-- [ ] I've checked my report for grammer & spelling using grammerly or chatGPT
+- [x] I've checked my report for grammer & spelling using grammerly or chatGPT
 - [x] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-- [ ] I've checked off every todo in this README.
+- [x] I've checked off every todo in this README.
 
 ## Help & Tutorials
 
